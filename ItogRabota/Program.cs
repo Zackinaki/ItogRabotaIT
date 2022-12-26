@@ -17,7 +17,7 @@ void SortArray(string[] array)
        
             if(array[i].Length<=3)
             Console.Write($"{array[i]} \t");
-        
+            
     }
 }
 
@@ -28,7 +28,7 @@ string[] array;
 array = new string[n];
 Console.WriteLine("Vvedite elem-ti massiva: ");
 InputArray(array);
-Console.WriteLine("\nMassiv emeet vid: ");
+Console.WriteLine("\nNachal'nii massiv emeet vid: ");
 PrintArray(array);
-Console.WriteLine("\nMassiv izmenilsa: ");
+Console.WriteLine("\n\nMassiv emeet vid gde kazhdii elem-t imeet ne bol'she 3 simvolov: ");
 SortArray(array);
