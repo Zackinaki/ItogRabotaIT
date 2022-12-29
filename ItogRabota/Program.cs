@@ -7,18 +7,30 @@
 void PrintArray(string[] array)
 {
     for (int i = 0; i < array.Length; i++)
-    Console.Write($"{array[i]} \t");
+    {
+        
+        Console.Write($"{array[i]} \t");
+    }
+    
 }
 
-void SortArray(string[] array)
+void SortArray(string[] array, string[]newArray)
 {
+    
+    int j=0;
+   
     for (int i = 0; i < array.Length; i++)
     {
-       
-            if(array[i].Length<=3)
-            Console.Write($"{array[i]} \t");
+        if(array[i].Length<=3)
+        {
+            newArray[j]=array[i];
+            j++;
             
+        }
     }
+    if (j==0)
+    Console.Write("Net elementov udovletvoraushih usloviu");
+    
 }
 
 Console.Clear();
@@ -30,5 +42,10 @@ Console.WriteLine("Vvedite elem-ti massiva: ");
 InputArray(array);
 Console.WriteLine("\nNachal'nii massiv emeet vid: ");
 PrintArray(array);
+
+string[] newArray;
+newArray = new string[n];
 Console.WriteLine("\n\nMassiv emeet vid gde kazhdii elem-t imeet ne bol'she 3 simvolov: ");
-SortArray(array);
+SortArray(array,newArray);
+PrintArray(newArray);
+
